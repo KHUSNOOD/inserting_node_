@@ -12,3 +12,19 @@ void insert(int x){
     p->next=t;   // Changing 'p' next;
     
 }
+
+
+//****** inserting node at last*********
+ void insertlast(int x){
+    struct node *t;
+    t=new node;
+    t->data=x;
+    t->next=0;
+    if(first==0){
+        first=last=t; // if there is no node initially;
+    }
+    else{
+     last->next=t;  // if node is there then code;
+     last=t; 
+ }
+}

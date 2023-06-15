@@ -1,12 +1,12 @@
 // generating a funtion for inserting node at index pos;
 void insert(int x){
     int pos=4; // required index;
-    struct node *t,*p;  //required node to generete one for insertion and one for moving from starting node;
-    p=new node; t=new node;  // Allocating memory dynamically to node;
-    t->data=x;   // 1st new inserted node's value;
-    p=first;     // 2nd node initiating from first;
+    struct node *t,*p; 
+    p=new node; t=new node;  
+    t->data=x;   
+    p=first;     
     for(int i=0; i<pos-1; i++){
-        p=p->next; // moving 'p' from starting to the index-1 required;
+        p=p->next; 
     }
     t->next=p->next;  // Assinging 't' next from 'p' next;
     p->next=t;   // Changing 'p' next;
